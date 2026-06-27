@@ -21,7 +21,8 @@ async function login() {
 
     if(response.ok){
 
-        localStorage.setItem("user", email);
+        localStorage.setItem("token", data.access_token);
+        localStorage.setItem("email", email);
 
         alert("Login Successful");
 

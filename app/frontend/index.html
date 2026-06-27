@@ -14,6 +14,10 @@
     <div class="header">
         <h1>🧠 MindCare AI</h1>
         <p class="subtitle">Your Mental Wellness Companion</p>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
     </div>
 
     <div id="chat-box"></div>
@@ -31,6 +35,15 @@
     </div>
 
 </div>
+
+<script>
+
+if(!localStorage.getItem("token")){
+    alert("Please login first");
+    window.location.href = "login.html";
+}
+
+</script>
 
 <script src="script.js"></script>
 
