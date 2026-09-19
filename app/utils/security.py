@@ -20,3 +20,12 @@ def create_access_token(data: dict):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm="HS256")
 
     return encoded_jwt
+def decode_access_token(token: str):
+
+    payload = jwt.decode(
+        token,
+        SECRET_KEY,
+        algorithms=["HS256"]
+    )
+
+    return payload

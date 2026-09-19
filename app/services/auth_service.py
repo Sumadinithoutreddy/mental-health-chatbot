@@ -38,6 +38,7 @@ def login_user(email, password):
     token = create_access_token({"email": email})
 
     return {
-        "message": "Login successful ✅",
-        "token": token
-    }
+    "message": "Login successful ✅",
+    "token": token,
+    "name": user["name"]
+}

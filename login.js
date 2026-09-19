@@ -18,11 +18,13 @@ async function login() {
     );
 
     const data = await response.json();
+    console.log("LOGIN RESPONSE:", data);
 
     if(response.ok){
 
-        localStorage.setItem("token", data.access_token);
-        localStorage.setItem("email", email);
+        localStorage.setItem("token", data.token);
+localStorage.setItem("email", email);
+localStorage.setItem("name", data.name);
 
         alert("Login Successful");
 

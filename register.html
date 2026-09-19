@@ -1,19 +1,68 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>MindCare AI - Register</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
+
 <body>
 
-<h1>Register</h1>
+<div class="container">
 
-<input type="text" id="name" placeholder="Name"><br><br>
+```
+<div class="header">
+    <h1>🧠 MindCare AI</h1>
+    <p class="subtitle">Your Mental Wellness Companion</p>
+</div>
 
-<input type="email" id="email" placeholder="Email"><br><br>
+<div class="login-box">
 
-<input type="password" id="password" placeholder="Password"><br><br>
+    <h2>Create Account 🌱</h2>
 
-<button onclick="register()">Register</button>
+    <p class="login-text">
+        Create your account to begin your journey
+    </p>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter Name"
+    >
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter Email"
+    >
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+    >
+
+    <button onclick="register()">
+        Register
+    </button>
+
+    <p class="signup-text">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+</div>
+```
+
+</div>
 
 <script src="auth.js"></script>
 

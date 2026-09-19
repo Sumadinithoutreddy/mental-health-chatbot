@@ -6,6 +6,7 @@ load_dotenv()
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 
+
 def get_ai_response(user_message):
 
     url = "https://openrouter.ai/api/v1/chat/completions"
@@ -29,8 +30,18 @@ def get_ai_response(user_message):
         ]
     }
 
-    response = requests.post(url, headers=headers, json=data)
+    response = requests.post(
+        url,
+        headers=headers,
+        json=data
+    )
+
+    print("OpenRouter Status:", response.status_code)
+    print("OpenRouter Response:", response.text)
 
     result = response.json()
+
+    if "choices" not in result:
+        return "AI service error: " + str(result)
 
     return result["choices"][0]["message"]["content"]
